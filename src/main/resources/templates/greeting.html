@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="MainStyle.css">
+
+</head>
+<body>
+
+<div class="page">
+  <div class="header">
+    <div class="lable">
+      <b>Rover.ok</b>
+    </div>
+    <!--  <div class="nav1">-->
+    <!--      <b><a>bicycle</a>-->
+    <!--      <a>component</a>-->
+    <!--      <a>charm</a></b>-->
+    <!--  </div>-->
+    <div class="nav2">
+      <button class="butt" onclick="location.reload()"><img th:src="@{/images/heart.png}"></button>
+      <button class="butt" onclick="location.reload()"><img th:src="@{/images/user.png}"></button>
+      <button class="butt" onclick="location.reload()"><img th:src="@{/images/cart.png}"></button>
+
+    </div>
+  </div>
+
+
+  <div class="slider-position">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img th:src="@{/images/bik2.jpg}" style="width:100%">
+        <div class="text">Caption Textfkdkjkgf<br>
+          sdlskdlkslsdsldklddfdfdfdfdfdfdfdfdfdf<br>
+          sdjsjhdjshdjhsjdjsdhshjdhdfdfdfdf<br>
+          dfkojdkfjdkfjkdjfkdjfkjdfjdkf<br>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img th:src="@{/images/bik2.jpg}" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img th:src="@{/images/bik2.jpg}" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+  </div>
+
+
+  <h1 style="text-align: center">Товари</h1>
+
+
+  <div class="nav3">
+
+    <div class="img_button1">
+      <button class="velobutt1" onclick="window.location.href='/second'">
+        <img th:src="@{/images/bik3.jpg}" alt="Button Image">
+        <span class="text">Деякий текст</span>
+      </button>
+    </div>
+
+    <div class="small_img">
+      <div class="img_button">
+        <button class="velobutt" onclick="location.reload()">
+          <img th:src="@{/images/p6.jpg}" alt="Button Image">
+          <span class="text">Деякий текст</span>
+        </button>
+      </div>
+
+      <div class="img_button">
+        <button class="velobutt" onclick="location.reload()" >
+          <img th:src="@{/images/a4.jpg}" alt="Button Image">
+          <span class="text">Деякий текст</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!--footer_start-->
+  <footer class="footer">
+    <div class="footer_text1"><h1>Rover.ok</h1></div>
+    <div class="footer_text2"><h1>Каталоги</h1> <br>
+      <a class="a" href="/second">
+        велосипеди
+        <br>комплектуючі
+        <br>аксесуари
+      </a>
+    </div>
+    <div class="footer_text3">
+      <h1> Контактна інформація</h1>
+      0990496140<br>
+      0990496140
+    </div>
+    <div class="footer_text4">
+      <h1><img th:src="@{/images/b1.png}">Watsapp</h1>
+      <h1><img th:src="@{/images/b2.png}">Telegram</h1>
+      <h1><img th:src="@{/images/b3.png}">Gmail</h1>
+      <h1><img th:src="@{/images/b4.png}">Івано-Франківськ <br>
+        Надрічна 18</h1>
+    </div>
+  </footer>
+  <!--footer_end-->
+</div>
+
+
+</body>
+</html>

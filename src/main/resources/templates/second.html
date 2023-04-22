@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="second.css">
+</head>
+<body>
+
+<div class="page">
+<div class="header">
+  <div class="lable">
+    <b>Rover.ok</b>
+  </div>
+  <div class="nav1">
+    <b><a>bicycle</a>
+      <a>component</a>
+      <a>charm</a></b>
+  </div>
+  <div class="nav2">
+    <img th:src="@{/images/heart.png}">
+    <img th:src="@{/images/user.png}">
+    <img th:src="@{/images/cart.png}">
+  </div>
+</div>
+
+  <div th:each="el : ${posts}">
+    <h3 th:text="${el.title}" class="el"></h3>
+    <h3 th:text="${el.id}" class="el"></h3>
+    <img th:src="@{/images/${el.title}}" >
+  </div>
+
+  <!--footer_start-->
+  <footer class="footer">
+    <div class="footer_text1"><h1>Rover.ok</h1></div>
+    <div class="footer_text2"><h1>Каталоги</h1> <br>
+      <a class="a" href="/">
+        велосипеди
+        <br>комплектуючі
+        <br>аксесуари
+      </a>
+    </div>
+    <div class="footer_text3">
+      <h1> Контактна інформація</h1>
+      0990496140<br>
+      0990496140
+    </div>
+    <div class="footer_text4">
+      <h1><img th:src="@{/images/b1.png}">Watsapp</h1>
+      <h1><img th:src="@{/images/b2.png}">Telegram</h1>
+      <h1><img th:src="@{/images/b3.png}">Gmail</h1>
+      <h1><img th:src="@{/images/b4.png}">Івано-Франківськ <br>
+        Надрічна 18</h1>
+    </div>
+  </footer>
+  <!--footer_end-->
+
+
+</div>
+</body>
+</html>
