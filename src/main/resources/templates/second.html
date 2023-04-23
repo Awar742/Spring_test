@@ -27,7 +27,7 @@
   <div th:each="el : ${posts}">
     <h3 th:text="${el.title}" class="el"></h3>
     <h3 th:text="${el.id}" class="el"></h3>
-    <img th:src="@{/images/${el.title}}" >
+    <img th:src="@{/images/{im}(im=${el.title})}" >
   </div>
 
   <!--footer_start-->
