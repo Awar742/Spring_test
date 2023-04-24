@@ -1,16 +1,15 @@
+/*header start*/
 .header{
     background: #7cfc00;
     padding: 20px;
-    margin: -15px;
-    border: solid 5px black;
-    border-top: none;
-    border-right: none;
+    margin: -8px;
+    border-bottom: solid 5px black;
 
 }
 .lable{
     font-family: "Agency FB" ;
     font-size: 96px;
-    padding-right: 500px;
+
 }
 .nav1{
     position: relative;
@@ -21,14 +20,19 @@
 
 }
 .nav2{
-    position: relative;
-    text-align: right;
-    top: -100px;
+    position: absolute;
+    text-align:center;
+    padding: 8px 12px;
+    top: 50px;
     right: 10px;
-    margin-bottom: -30px;
-    margin-right: 10px;
 
 }
+
+.butt{
+    background: lawngreen;
+    border: none;
+}
+/*header end*/
 
 .page{
     margin: -8px;
@@ -45,6 +49,28 @@
      right: 10px;
      margin-bottom: -30px;
      margin-right: 10px;
+}
+.tovaru{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+}
+.lot{
+    border: 5px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    width: 30%;
+    margin: 5px;
+    text-align: left;
+}
+.lot img{
+width:247px;
+height:150px;
+}
+.lot button{
+height:100%;
+width:100%;
 }
 /*footer start*/
 .footer{

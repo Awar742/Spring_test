@@ -8,27 +8,41 @@
 <body>
 
 <div class="page">
-<div class="header">
-  <div class="lable">
-    <b>Rover.ok</b>
-  </div>
-  <div class="nav1">
-    <b><a>bicycle</a>
-      <a>component</a>
-      <a>charm</a></b>
-  </div>
-  <div class="nav2">
-    <img th:src="@{/images/heart.png}">
-    <img th:src="@{/images/user.png}">
-    <img th:src="@{/images/cart.png}">
-  </div>
-</div>
+  <!--  header start-->
+  <div class="header">
+    <div class="lable">
+      <b>Rover.ok</b>
+    </div>
+      <div class="nav1">
+          <b><a>bicycle</a>
+          <a>component</a>
+          <a>charm</a></b>
+      </div>
+    <div class="nav2">
+      <button class="butt" onclick="location.reload()"><img th:src="@{/images/heart.png}"></button>
+      <button class="butt" onclick="location.reload()"><img th:src="@{/images/user.png}"></button>
+      <button class="butt" onclick="location.reload()"><img th:src="@{/images/cart.png}"></button>
 
-  <div th:each="el : ${posts}">
-    <h3 th:text="${el.title}" class="el"></h3>
-    <h3 th:text="${el.id}" class="el"></h3>
-    <img th:src="@{/images/{im}(im=${el.title})}" >
+    </div>
   </div>
+  <!--  header end-->
+
+  <div class="tovaru">
+    <div class="lot" th:each="el : ${posts}">
+    <button onclick="location.reload()">
+      <h1 th:text="${el.title}" class="el"></h1>
+      <h2 th:text="${el.id}" class="el"></h2>
+      <img th:src="@{/images/{im}(im=${el.title})}">
+    </button>
+    </div>
+  </div>
+
+
+<!--  <div th:each="el : ${posts}">-->
+<!--    <h3 th:text="${el.title}" class="el"></h3>-->
+<!--    <h3 th:text="${el.id}" class="el"></h3>-->
+<!--    <img th:src="@{/images/{im}(im=${el.title})}" >-->
+<!--  </div>-->
 
   <!--footer_start-->
   <footer class="footer">
