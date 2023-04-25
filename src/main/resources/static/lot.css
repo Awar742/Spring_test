@@ -1,0 +1,90 @@
+/*header start*/
+.header{
+    background: #7cfc00;
+    padding: 20px;
+    margin: -8px;
+    border-bottom: solid 5px black;
+
+}
+.lable{
+    font-family: "Agency FB" ;
+    font-size: 96px;
+
+}
+.nav1{
+    position: relative;
+    text-align: center;
+    top: -50px;
+    font-family: "Agency FB" ;
+    font-size: 24px;
+
+}
+.nav2{
+    position: absolute;
+    text-align:center;
+    padding: 8px 12px;
+    top: 50px;
+    right: 10px;
+
+}
+
+.butt{
+    background: lawngreen;
+    border: none;
+}
+/*header end*/
+
+.page{
+    margin: -8px;
+    overflow: hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+}
+
+
+/*footer start*/
+.footer{
+    border-top:solid 5px black;
+    position: relative;
+    margin-top: auto;
+    padding: 20px;
+    background-color: #777474;
+    display:flex;
+    height: 330px;
+}
+
+.footer_text1{
+    margin: 20px;
+    position: relative;
+    font-family: "Agency FB";
+    font-size: 32px;
+}
+
+.footer_text2{
+    margin: 20px;
+    position: relative;
+    left: 90px;
+    font-family: "Agency FB";
+    font-size: 20px;
+}
+.a{
+    font-size: 20px;
+}
+.footer_text3{
+    margin: 20px;
+    position: relative;
+    left: 180px;
+    font-family: "Agency FB";
+    font-size: 20px;
+}
+.footer_text4{
+    margin: 20px;
+    position: relative;
+    left: 180px;
+    display: block;
+    font-size: 12px;
+
+}
+/*footer end*/
