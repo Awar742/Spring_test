@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="second.css">
+    <link rel="stylesheet" th:href="@{/lot.css}">
 </head>
 <body>
 
@@ -28,19 +28,21 @@
     <!--  header end-->
 
 
-
-
-    <!--  <div th:each="el : ${posts}">-->
-    <!--    <h3 th:text="${el.title}" class="el"></h3>-->
-    <!--    <h3 th:text="${el.id}" class="el"></h3>-->
-    <!--    <img th:src="@{/images/{im}(im=${el.title})}" >-->
-    <!--  </div>-->
+<div>
+    <img th:src="@{/images/{it}.jpg (it=${id_lot})}" />
+    <h3 th:text="${id_lot}"></h3>
+</div>
+<!--      <div th:each="el : ${posts}">-->
+<!--        <h3 th:text="${el.title}" class="el"></h3>-->
+<!--        <h3 th:text="${el.id}" class="el"></h3>-->
+<!--        <img th:src="@{/images/{im}(im=${el.title})}" >-->
+<!--      </div>-->
 
     <!--footer_start-->
     <footer class="footer">
         <div class="footer_text1"><h1>Rover.ok</h1></div>
         <div class="footer_text2"><h1>Каталоги</h1> <br>
-            <a class="a" href="/">
+            <a class="a" href="/" >
                 велосипеди
                 <br>комплектуючі
                 <br>аксесуари

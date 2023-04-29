@@ -29,11 +29,11 @@
 
   <div class="tovaru">
     <div class="lot" th:each="el : ${posts}">
-      <a th:href="@{/lot}">
+      <a th:href="@{/lot/{im}(im=${el.id})}">
     <button onclick="location.reload()" >
       <h1 th:text="${el.title}" class="el"></h1>
       <h2 th:text="${el.id}" class="el"></h2>
-      <img th:src="@{/images/{im}(im=${el.title})}">
+      <img th:src="@{/images/{im}.jpg (im=${el.id})}">
     </button>
       </a>
     </div>
