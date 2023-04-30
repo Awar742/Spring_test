@@ -57,6 +57,7 @@
     text-align: center;
     display: inline-block;
 }
+
 .lot{
     border: 5px solid black;
     border-radius: 5px;
@@ -66,16 +67,34 @@
     margin: 5px;
     text-align: left;
 }
+
 .lot img{
 width:247px;
 height:150px;
 }
+
 .lot_content{
     display:
   height:300px;
 }
 
+.afa{
+text_align:center;
+height:150px;
+}
 
+.afa h3{
+position:relative;
+text-decoration: none;
+color: black;
+
+left:5px;
+top:5px;
+}
+.afaf img{
+position:relative;
+left:90px;
+}
 /*footer start*/
 .footer{
     border-top:solid 5px black;
