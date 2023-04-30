@@ -49,6 +49,7 @@
      right: 10px;
      margin-bottom: -30px;
      margin-right: 10px;
+     display: inline-grid;
 }
 .tovaru{
     margin-top: 20px;
@@ -61,6 +62,7 @@
     border-radius: 5px;
     display: inline-block;
     width: 30%;
+    height:300px;
     margin: 5px;
     text-align: left;
 }
@@ -68,10 +70,12 @@
 width:247px;
 height:150px;
 }
-.lot button{
-height:100%;
-width:100%;
+.lot_content{
+    display:
+  height:300px;
 }
+
+
 /*footer start*/
 .footer{
     border-top:solid 5px black;
