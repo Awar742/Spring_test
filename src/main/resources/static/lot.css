@@ -43,6 +43,21 @@
 
 }
 
+.content {
+margin:20px;
+display:flex;
+}
+
+.in_content1{
+width:700px;
+height:400px;
+margin-right:10px;
+}
+
+.content img{
+width:700px;
+height:400px;
+}
 
 /*footer start*/
 .footer{

@@ -28,9 +28,16 @@
     <!--  header end-->
 
 
-<div>
+<div class="content">
+    <div class="in_content1">
     <img th:src="@{/images/{it}.jpg (it=${id_lot})}" />
+    </div>
+    <div class="in_content2">
+        <code >
+            SELECT full_text FROM table_name WHERE id = ${id_lot};
+        </code>
     <h3 th:text="${id_lot}"></h3>
+    </div>
 </div>
 <!--      <div th:each="el : ${posts}">-->
 <!--        <h3 th:text="${el.title}" class="el"></h3>-->
