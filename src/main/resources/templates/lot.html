@@ -8,19 +8,20 @@
 <body>
 
 <div class="page">
+
     <!--  header start-->
     <div class="header">
         <div class="lable">
-            <b>Rover.ok</b>
+            <a href="/">Rover.ok</a>
         </div>
         <div class="nav1">
-            <b><a>bicycle</a>
-                <a>component</a>
-                <a>charm</a></b>
+            <b><a href="/second/bicycle">bicycle</a>
+                <a href="/second/component">component</a>
+                <a href="/second/accessories">accessories</a></b>
         </div>
         <div class="nav2">
             <button class="butt" onclick="location.reload()"><img th:src="@{/images/heart.png}"></button>
-            <button class="butt" onclick="location.reload()"><img th:src="@{/images/user.png}"></button>
+            <button class="butt" onclick="window.location.href='/regist'"><img th:src="@{/images/user.png}"></button>
             <button class="butt" onclick="location.reload()"><img th:src="@{/images/cart.png}"></button>
 
         </div>
@@ -28,14 +29,19 @@
     <!--  header end-->
 
 
+
 <div class="content">
     <div class="in_content1">
     <img th:src="@{/images/{it}.jpg (it=${id_lot})}" />
     </div>
     <div class="in_content2">
-        <code >
-            SELECT full_text FROM table_name WHERE id = ${id_lot};
-        </code>
+
+
+                <h3 th:text="${post.full_text}" class="el"></h3>
+        <!--        <h3 th:text="${el.id}" class="el"></h3>-->
+        <!--        <img th:src="@{/images/{im}(im=${el.title})}" >-->
+
+
     <h3 th:text="${id_lot}"></h3>
     </div>
 </div>

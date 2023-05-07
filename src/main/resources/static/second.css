@@ -11,13 +11,22 @@
     font-size: 96px;
 
 }
+.lable a{
+    text-decoration: none;
+    color:black;
+}
 .nav1{
     position: relative;
     text-align: center;
     top: -50px;
     font-family: "Agency FB" ;
     font-size: 24px;
-
+    left:35%;
+    width:30%;
+}
+.nav1 a{
+    text-decoration: none;
+    color:black;
 }
 .nav2{
     position: absolute;

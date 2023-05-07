@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="second.css">
+  <link rel="stylesheet" th:href="@{/second.css}">
 </head>
 <body>
 
@@ -11,16 +11,16 @@
   <!--  header start-->
   <div class="header">
     <div class="lable">
-      <b>Rover.ok</b>
+      <a href="/">Rover.ok</a>
     </div>
-      <div class="nav1">
-          <b><a>bicycle</a>
-          <a>component</a>
-          <a>charm</a></b>
-      </div>
+    <div class="nav1">
+      <b><a href="/second/bicycle">bicycle</a>
+        <a href="/second/component">component</a>
+        <a href="/second/accessories">accessories</a></b>
+    </div>
     <div class="nav2">
       <button class="butt" onclick="location.reload()"><img th:src="@{/images/heart.png}"></button>
-      <button class="butt" onclick="location.reload()"><img th:src="@{/images/user.png}"></button>
+      <button class="butt" onclick="window.location.href='/regist'"><img th:src="@{/images/user.png}"></button>
       <button class="butt" onclick="location.reload()"><img th:src="@{/images/cart.png}"></button>
 
     </div>

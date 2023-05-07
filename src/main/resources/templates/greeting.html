@@ -12,16 +12,16 @@
 <!--  header start-->
   <div class="header">
     <div class="lable">
-      <b>Rover.ok</b>
+      <a href="/">Rover.ok</a>
     </div>
-    <!--  <div class="nav1">-->
-    <!--      <b><a>bicycle</a>-->
-    <!--      <a>component</a>-->
-    <!--      <a>charm</a></b>-->
-    <!--  </div>-->
+      <div class="nav1">
+          <b><a href="/second/bicycle">bicycle</a>
+          <a href="/second/component">component</a>
+          <a href="/second/accessories">accessories</a></b>
+      </div>
     <div class="nav2">
       <button class="butt" onclick="location.reload()"><img th:src="@{/images/heart.png}"></button>
-      <button class="butt" onclick="location.reload()"><img th:src="@{/images/user.png}"></button>
+      <button class="butt" onclick="window.location.href='/regist'"><img th:src="@{/images/user.png}"></button>
       <button class="butt" onclick="location.reload()"><img th:src="@{/images/cart.png}"></button>
 
     </div>
@@ -102,7 +102,7 @@
   <div class="nav3">
 
     <div class="img_button1">
-      <button class="velobutt1" onclick="window.location.href='/second'">
+      <button class="velobutt1" onclick="window.location.href='/second/bicycle'">
         <img th:src="@{/images/bik3.jpg}" alt="Button Image">
         <span class="text">Деякий текст</span>
       </button>
@@ -110,14 +110,14 @@
 
     <div class="small_img">
       <div class="img_button">
-        <button class="velobutt" onclick="location.reload()">
+        <button class="velobutt" onclick="window.location.href='/second/component'">
           <img th:src="@{/images/p6.jpg}" alt="Button Image">
           <span class="text">Деякий текст</span>
         </button>
       </div>
 
       <div class="img_button">
-        <button class="velobutt" onclick="location.reload()" >
+        <button class="velobutt" onclick="window.location.href='/second/accessories'" >
           <img th:src="@{/images/a4.jpg}" alt="Button Image">
           <span class="text">Деякий текст</span>
         </button>

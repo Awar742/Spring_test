@@ -1,12 +1,24 @@
 package com.proba.blog.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 @Entity
+
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    private String type;
 
     @Lob
     @Column(name = "Image", length = Integer.MAX_VALUE, nullable = true)
