@@ -17,8 +17,9 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/","/greeting","/*.css","/*.jpg","/regist").permitAll()
+                        .requestMatchers("/","/greeting","/*.css","/*.jpg","/images/*","/regist").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin()
