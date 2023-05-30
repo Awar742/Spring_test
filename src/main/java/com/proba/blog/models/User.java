@@ -1,25 +1,39 @@
 package com.proba.blog.models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "users")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+
+
+    private boolean enabled;
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
     private Long cart;
     private Long fav;
     private Long phone;
     private String password;
-    private String  user_name;
+    @Id
+    private String  username;
 
-    public String getRole() {
-        return role;
+    public String getUsername() {
+        return username;
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
 
     public String getPassword() {
         return password;
@@ -29,19 +43,10 @@ public class User {
         this.password = password;
     }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
 
-    private String  role;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     public Long getCart() {
         return cart;
@@ -75,11 +80,5 @@ public class User {
         this.password = password;
     }
 
-    public String getUser_name() {
-        return user_name;
-    }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
-    }
 }

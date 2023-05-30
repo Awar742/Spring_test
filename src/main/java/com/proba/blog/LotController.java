@@ -1,6 +1,6 @@
 package com.proba.blog;
 
-import com.proba.blog.Repo.PostRepository;
+import com.proba.blog.repo.PostRepository;
 import com.proba.blog.models.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.Optional;
 
 @Controller
-public class lotController {
+public class LotController {
 
     @Autowired
     private PostRepository postRepository;

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
   <title>Getting Started: Serving Web Content</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -20,8 +20,15 @@
           <a href="/second/accessories">accessories</a></b>
       </div>
     <div class="nav2">
+
       <button class="butt" onclick="location.reload()"><img th:src="@{/images/heart.png}"></button>
-      <button class="butt" onclick="window.location.href='/regist'"><img th:src="@{/images/user.png}"></button>
+
+<div>
+      <div sec:authorize="isAuthenticated()"><button class="butt" onclick="window.location.href='/userInfo'"><img th:src="@{/images/user.png}"></button></div>
+
+      <div sec:authorize="!isAuthenticated()"><button class="butt" onclick="window.location.href='/login'"><img th:src="@{/images/user.png}"></button></div>
+    </div>
+
       <button class="butt" onclick="location.reload()"><img th:src="@{/images/cart.png}"></button>
 
     </div>
@@ -34,10 +41,10 @@
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
         <img th:src="@{/images/bik2.jpg}" style="width:100%">
-        <div class="text">Caption Textfkdkjkgf<br>
-          sdlskdlkslsdsldklddfdfdfdfdfdfdfdfdfdf<br>
-          sdjsjhdjshdjhsjdjsdhshjdhdfdfdfdf<br>
-          dfkojdkfjdkfjkdjfkdjfkjdfjdkf<br>
+        <div class="text">BERGAMONT<br>
+          Розмір колеса : 29<br>
+          Розмір рами : S<br>
+          Тип вилки : Гібридна<br>
         </div>
       </div>
 

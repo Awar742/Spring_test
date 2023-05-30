@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" th:href="@{/second.css}">
+  <link rel="stylesheet" th:href="@{/regist.css}">
 </head>
 <body>
-
 <div class="page">
   <!--  header start-->
   <div class="header">
@@ -19,31 +19,19 @@
         <a href="/second/accessories">accessories</a></b>
     </div>
     <div class="nav2">
-      <button class="butt" onclick="location.reload()"><img th:src="@{/images/heart.png}"></button>
-      <button class="butt" onclick="window.location.href='/regist'"><img th:src="@{/images/user.png}"></button>
-      <button class="butt" onclick="location.reload()"><img th:src="@{/images/cart.png}"></button>
 
     </div>
   </div>
   <!--  header end-->
 
-  <div class="tovaru">
-    <div class="lot" th:each="el : ${posts}">
-      <a th:href="@{/lot/{im}(im=${el.id})}">
-        <div class="lot_content">
-          <div class="afaf">
-        <img th:src="@{/images/{im}.jpg (im=${el.id})}" >
-          </div>
-          <div class="afa">
-        <h3 th:text="${el.title}" class="el"></h3><br>
-        <h3 th:text="${el.id}" class="el"></h3>
-          </div>
-        </div>
-      </a>
-    </div>
+
+  <div>
+
+    <h3 th:text="${user.username}"></h3>
+    <h3 th:text="${user.phone}"></h3>
+
+
   </div>
-
-
 
 
   <!--footer_start-->
@@ -70,7 +58,6 @@
     </div>
   </footer>
   <!--footer_end-->
-
 
 </div>
 </body>

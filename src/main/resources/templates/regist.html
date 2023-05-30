@@ -29,9 +29,10 @@
     Invalid username and password.
   </div>
     <h1>Registration Form</h1>
-  <form th:action="@{/regist}" method="post">
-    <div><label> User Name : <input type="text" id="user_name" name="username"/> </label></div>
-    <div><label> Password: <input type="password" id="password" name="password"/> </label></div>
+  <form th:action="@{/regist}" method="post" th:object="${user}">
+    <div><label> User Name : <input type="text" id="user_name" name="username" th:field="*{username}"/> </label></div>
+    <div><label> Password: <input type="password" id="password" name="password" th:field="*{password}"/> </label></div>
+    <div><label> Phone: <input type="text" id="phone" name="phone" th:field="*{phone}"/> </label></div>
     <div><input type="submit" value="Sign In"/></div>
   </form>
 

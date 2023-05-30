@@ -1,19 +1,83 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-  <title>Spring Security Example </title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" th:href="@{/regist.css}">
 </head>
 <body>
-<div th:if="${param.error}">
-  Invalid username and password.
+<div class="page">
+  <!--  header start-->
+  <div class="header">
+    <div class="lable">
+      <a href="/">Rover.ok</a>
+    </div>
+    <div class="nav1">
+      <b><a href="/second/bicycle">bicycle</a>
+        <a href="/second/component">component</a>
+        <a href="/second/accessories">accessories</a></b>
+    </div>
+    <div class="nav2">
+
+    </div>
+  </div>
+  <!--  header end-->
+
+<div>
+  <div th:if="${param.error}">
+    Invalid username and password.
+  </div>
+    <h1>Registration Form</h1>
+  <form th:action="@{/login}" method="post">
+    <div><label> User Name : <input type="text" id="user_name" name="username"/> </label></div>
+    <div><label> Password: <input type="password" id="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+  </form>
+<a th:href="@{/regist}">Зареєструватись</a>
+<!--  <h1>Registration Form</h1>-->
+<!--  <form action="/regist" method="POST">-->
+<!--    <label for="username">Username:</label>-->
+<!--    <input type="text" id="username" name="username" required><br><br>-->
+
+<!--    <label for="phone">Email:</label>-->
+<!--    <input type="phone" id="phone" name="phone" required><br><br>-->
+
+<!--    <label for="password">Password:</label>-->
+<!--    <input type="password" id="password" name="password" required><br><br>-->
+
+<!--    <label for="confirm_password">Confirm Password:</label>-->
+<!--    <input type="password" id="confirm_password" name="confirm_password" required><br><br>-->
+<!--    <button type="submit">Register</button>-->
+<!--  </form>-->
+
 </div>
-<div th:if="${param.logout}">
-  You have been logged out.
+
+  <!--footer_start-->
+  <footer class="footer">
+    <div class="footer_text1"><h1>Rover.ok</h1></div>
+    <div class="footer_text2"><h1>Каталоги</h1> <br>
+      <a class="a" href="/">
+        велосипеди
+        <br>комплектуючі
+        <br>аксесуари
+      </a>
+    </div>
+    <div class="footer_text3">
+      <h1> Контактна інформація</h1>
+      0990496140<br>
+      0990496140
+    </div>
+    <div class="footer_text4">
+      <h1><img th:src="@{/images/b1.png}">Watsapp</h1>
+      <h1><img th:src="@{/images/b2.png}">Telegram</h1>
+      <h1><img th:src="@{/images/b3.png}">Gmail</h1>
+      <h1><img th:src="@{/images/b4.png}">Івано-Франківськ <br>
+        Надрічна 18</h1>
+    </div>
+  </footer>
+  <!--footer_end-->
+
 </div>
-<form th:action="@{/login}" method="post">
-  <div><label> User Name : <input type="text" name="username"/> </label></div>
-  <div><label> Password: <input type="password" name="password"/> </label></div>
-  <div><input type="submit" value="Sign In"/></div>
-</form>
 </body>
 </html>

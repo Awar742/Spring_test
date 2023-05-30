@@ -1,4 +1,4 @@
-package com.proba.blog.Repo;
+package com.proba.blog.repo;
 
 import com.proba.blog.models.Post;
 import org.springframework.data.repository.CrudRepository;
